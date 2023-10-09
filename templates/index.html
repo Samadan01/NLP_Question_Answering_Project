@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Question Answering Model
+    </title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            color: aliceblue;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">    
+            <h1 style="color: #5f788a">Question Answering Model</h1>
+    </header>
+    
+    <div>
+        <form method="post" action="/predict">
+            <textarea rows="8" cols="60" name="context" placeholder="Enter the context here"
+                autocomplete="off">{{ context }}</textarea>
+            <textarea rows="8" cols="60" name="question" placeholder="Enter the question to ask from the context"
+                autocomplete="off">{{ question }}</textarea>
+            <div>
+                <button type="submit">
+                    Submit
+                </button>
+                <a href="/">Reset</a>
+            </div>
+        </form>
+
+    </div>
+
+    <div> <h2 style="color: blue">{{ prediction }} </h2></div>
+    
+</body>
+
+</html>
+
